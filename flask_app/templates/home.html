@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+    <div class ="content-section">
+      <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+          <legend class="border-bottom mb-12">Recipes Search</legend>
+          <div class="form-group">
+            {{ form.ingredients_search.label(class="form-control-label") }}
+            {{ form.ingredients_search(class="form-control form-control-lg")  }}
+          </div>
+        </fieldset>
+        <div class="form-group">
+          {{ form.search(class="btn btn-outline-info") }}
+        </div>
+      </form>
+    </div>
+
+    {% for recipe in recipes %}
+        <h1>{{ recipe.Recipe }}</h1>
+        <p><a href="{{ recipe.URL }}" target="_blank">{{ recipe.URL }}</a></p>
+        <p>{{ recipe.Ingredients }}</p>
+    {% endfor %}
+
+{% endblock content %}
