@@ -11,7 +11,6 @@ app.config['SECRET_KEY'] = 'd2c44137ec36c4b1e41fcd54565313b4'
 all_recipes = pd.read_csv('all_recipes.csv')
 
 
-@app.route("/", methods=['GET', 'POST'])
 def home():
     form = RecipesSearchForm()
     if form.validate_on_submit():
