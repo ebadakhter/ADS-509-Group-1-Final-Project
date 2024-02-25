@@ -21,19 +21,19 @@ git clone https://github.com/ebadakhter/ADS-509-Group-1-Final-Project
 2. Navigate to the project directory:
 
 ```bash
-cd ADS-509-Group-1-Final-Project
+cd ADS-509-Group-1-Final-Project/flask_app/
 ```
 
 3. Install Dependencies:
 
 ``` bash
-pip install -r flask_app/requirements.txt
+pip install -r requirements.txt
 ```
 
 4. Start the application:
 
 ``` bash
-python flask_app/recipe_app.py
+python recipe_app.py
 ```
 
 ## Usage
