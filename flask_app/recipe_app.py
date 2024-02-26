@@ -20,7 +20,11 @@ def home():
         matching_recipes = []
 
         # Iterate through each recipe
-        for _, recipe in all_recipes.iterrows():
+        if form.dish_type.data != 'None':
+            match_recipes = all_recipes.loc[all_recipes['dish_type'] == form.dish_type.data]
+        else:
+            match_recipes=all_recipes
+        for _, recipe in match_recipes.iterrows():
             recipe_ingredients = recipe['Ingredients'].lower()
 
             # Check if all specified ingredients are in the recipe

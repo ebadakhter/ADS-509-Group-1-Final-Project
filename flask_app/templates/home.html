@@ -12,6 +12,13 @@
             {{ form.ingredients_search(class="form-control form-control-lg")  }}
           </div>
         </fieldset>
+      <fieldset class="form-group">
+          <legend class="border-bottom mb-12">Dish Type</legend>
+          <div class="form-group">
+            {{ form.dish_type.label(class="form-control-label") }}
+            {{ form.dish_type(class="form-control form-control-lg")  }}
+          </div>
+        </fieldset>
         <div class="form-group">
           {{ form.search(class="btn btn-outline-info") }}
         </div>
