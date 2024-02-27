@@ -9,6 +9,7 @@ app.config['SECRET_KEY'] = 'd2c44137ec36c4b1e41fcd54565313b4'
 
 
 all_recipes = pd.read_csv('../labeled_recipes.csv')
+all_recipes = all_recipes.drop_duplicates(keep="first")
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
