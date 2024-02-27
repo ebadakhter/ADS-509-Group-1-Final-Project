@@ -9,11 +9,11 @@ class RecipesSearchForm(FlaskForm):
     dish_type = SelectField('Dish Type(Select One)',
                             choices=[
                                 (None,''),
-                                ('Main Dish(chicken)','Main Dish(chicken)'),
-                                ('Main Dish(meat)','Main Dish(meat)'),
-                                ('Desserts/Sweets','Desserts/Sweets'),
-                                ('Sauces/sides/Appetizers', 'Sauces/sides/Appetizers'),
-                                ('Salads', 'Salads')
+                                ('Chicken dishes','Chicken dishes'),
+                                ('Meat dishes','Meat dishes'),
+                                ('Desserts and other sweets','Desserts and other sweets'),
+                                ('Sauces and sides', 'Sauces and sides'),
+                                ('Vegetarian', 'Vegetarian')
                             ])
     search = SubmitField('Search')
 

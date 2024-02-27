@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'd2c44137ec36c4b1e41fcd54565313b4'
 
 
-all_recipes = pd.read_csv('all_recipes.csv')
+all_recipes = pd.read_csv('../labeled_recipes.csv')
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -21,7 +21,7 @@ def home():
 
         # Iterate through each recipe
         if form.dish_type.data != 'None':
-            match_recipes = all_recipes.loc[all_recipes['dish_type'] == form.dish_type.data]
+            match_recipes = all_recipes.loc[all_recipes['Type'] == form.dish_type.data]
         else:
             match_recipes=all_recipes
         for _, recipe in match_recipes.iterrows():
