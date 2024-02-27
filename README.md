@@ -38,9 +38,9 @@ python recipe_app.py
 
 ## Usage
 
-1. Enter the ingredients you have in the search bar.
+1. Enter the ingredients you have in the search bar and select the dish type (not required)
 2. Click on the search button.
-3. Browse through the list of recipes that match your ingredients.
+3. Browse through the list of recipes that match your ingredients (and dish type if selected)
 4. Click on a recipe to view details and cooking instructions.
 
 
